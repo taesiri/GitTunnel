@@ -1,0 +1,28 @@
+[package]
+name = "gittunnel"
+version = "0.1.0"
+edition = "2021"
+description = "A deliberately slow TCP-over-Git push/fetch demo using SOCKS5 and encrypted frames."
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0"
+base64 = "0.22"
+chacha20poly1305 = { version = "0.10", features = ["std"] }
+clap = { version = "4.5", features = ["derive", "env"] }
+hex = "0.4"
+rand = "0.8"
+rand_core = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+tempfile = "3.13"
+thiserror = "2.0"
+tokio = { version = "1.41", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1.11", features = ["v4", "serde"] }
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.1"
